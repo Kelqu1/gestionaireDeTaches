@@ -1,11 +1,10 @@
-# Gestionnaire de tâches
-
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Init~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 import json
 import time
+import os
 
-fichier = "taches.json"
+# Définir le chemin du fichier .json dans le répertoire du projet
+repertoire_du_projet = os.path.dirname(os.path.abspath(__file__))
+fichier = os.path.join(repertoire_du_projet, "taches.json")
 
 # Lecture du fichier JSON ou initialisation si vide
 try:
